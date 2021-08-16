@@ -14,20 +14,18 @@ def sub_paths(subpath='index'):
 
 def write_to_file(data):
     with open('venv/database.txt', mode='a') as database:
-        firstname = data["firstname"]
-        lastname = data["lastname"]
+        name = data["name"]
         email = data["email"]
         message = data["message"]
-        file = database.write(f'\n{firstname},{lastname},{email},{message}')
+        file = database.write(f'\n{name},{email},{message}')
 
 def write_to_csv(data):
     with open('venv/database.csv', newline='', mode='a') as database2:
-        firstname = data["firstname"]
-        lastname = data["lastname"]
+        name = data["name"]
         email = data["email"]
         message = data["message"]
         csv_writer = csv.writer(database2, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-        csv_writer.writerow([firstname,lastname,email,message])
+        csv_writer.writerow([name,email,message])
 
 
 @app.route('/submit_form', methods=['POST', 'GET'])

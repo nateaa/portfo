@@ -2271,3 +2271,15 @@ button,
     border-top: 0;
     margin-top: 0;
     padding-top: 0; }
+
+
+#contactForm {
+  width: 80%;
+  justify-items: center;
+  margin: auto;
+}
+
+#content{
+  width:  80%;
+  margin: auto;
+}
