@@ -34,11 +34,24 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="static/assets/css/main.css" />
+
+    <!--favicon stuff-->
+    <link rel="apple-touch-icon" sizes="180x180" href="static/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon-16x16.png">
+    <link rel="manifest" href="static/images/site.webmanifest">
+    <link rel="mask-icon" href="static/images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
   </head>
 
 <div id="content">
 <h2>Note:</h2>
-    <p>Please note that this website's HTML and CSS is from an online template, although the style was copied for this contact form it was modified. I know how to build from scratch using bootstrap or other CSS frameworks, but don't quite have the ability to do something as organized as this template with nothing.</p>
+    <p>Please note that this website's HTML and CSS is from an online template, although the style was copied for this contact form the HTML and CSS were heavily modified to appear as it is here. I know how to build from scratch using bootstrap or other CSS frameworks, but that was not a priority for building this website.</p>
+
+    <h3>Functional Contact Form</h3>
+    <p>This contact form uses Python, the email module,  the smtplib module, and Flask to not only send an email message to me but also to send a confirmation email to you, additionally, it writes your information and message down into a csv file located on the server.</p>
+    <p>First the server runs a function that turns the form data into a dictionary. From there, it writes that data to a csv by calling a function that utilizes the csv module and pythons built in file handling.</p>
 </div>
                     
 
@@ -51,6 +64,9 @@
       <input type="email" name="email" id="demo-email" value="" placeholder="Email" />
     </div>
     <!-- Break -->
+    <div class="col-12 col-12-xsmall">
+      <input type="text" name="subject" id="demo-subject" value="" placeholder="Subject" />
+    </div>
     <!-- <div class="col-12">
       <select name="demo-category" id="demo-category">
         <option value="">- Category -</option>
@@ -62,21 +78,21 @@
     </div> -->
     <!-- Break -->
     <div class="col-4 col-12-small">
-      <input type="radio" id="demo-priority-low" name="demo-priority" checked>
+      <input type="radio" id="demo-priority-low" name="demo-priority" value="1" checked>
       <label for="demo-priority-low">Low</label>
     </div>
     <div class="col-4 col-12-small">
-      <input type="radio" id="demo-priority-normal" name="demo-priority">
+      <input type="radio" id="demo-priority-normal" name="demo-priority" value="2">
       <label for="demo-priority-normal">Normal</label>
     </div>
     <div class="col-4 col-12-small">
-      <input type="radio" id="demo-priority-high" name="demo-priority">
+      <input type="radio" id="demo-priority-high" name="demo-priority" value="3">
       <label for="demo-priority-high">High</label>
     </div>
     <!-- Break -->
     <div class="col-6 col-12-small">
       <input type="checkbox" id="demo-copy" name="demo-copy">
-      <label for="demo-copy">Email me a copy</label>
+      <label for="demo-copy">Email me a confirmation</label>
     </div>
     <!-- <div class="col-6 col-12-small">
       <input type="checkbox" id="demo-human" name="demo-human" checked>
