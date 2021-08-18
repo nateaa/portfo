@@ -41,7 +41,7 @@ def emailer(data):
     with smtplib.SMTP(host='smtp.gmail.com', port=587) as smtp:
         smtp.ehlo() 
         smtp.starttls()
-        smtp.login('natemead99@gmail.com', '@2019gmail.com')
+        smtp.login('natemead99@gmail.com', 'password')
         smtp.send_message(email)
         print('message sent')
 
@@ -62,7 +62,7 @@ def confirmation_email(data):   #this is the function for confirmation emails
     with smtplib.SMTP(host='smtp.gmail.com', port=587) as smtp:
         smtp.ehlo()
         smtp.starttls()
-        smtp.login('natemead99@gmail.com', '@2019gmail.com')
+        smtp.login('natemead99@gmail.com', 'password')
         smtp.send_message(email)
         print('message sent')
 
